@@ -227,11 +227,9 @@ for the fifth image probability:  <br/>
 
 
 obviously you can see the the top max probability is very low and distributed evenly between class as rate 0.02xx which is a very low probability.
-### Self Reflection and Improvements
+### Improvements
 
-This project was an awesome way for me to demystify deep learning from novice to intermediate. Also improved my python programming skills along the way. I could spend more time improving my model so that it recognises new images with high confidence, but I have to continue with next project and lessons. I have challenges managing my time next to my work and that brought some stress and influenced my choices completing this project. 
-
-some of the recommendation to improve the network:
+This project was an awesome in many ways to explore and demystify deep learning.There is a need to put more time improving the model so that it recogniZes new images with higher confidence (higher than 97%). My suggestion is augmenting data (shadow, light, transform augmentation), some of the recommendation to improve the network:
 
 * Augment data
 * Add more convolutional layers with same padding and stride 1 helps network to keep more information of input and generalize better.
