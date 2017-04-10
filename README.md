@@ -1,5 +1,4 @@
-#**Traffic Sign Recognition**
-###**Report by**:  Soheil Jahanshahi 
+
 
 
 **Build a Traffic Sign Recognition Project**
@@ -27,18 +26,18 @@ The goals / steps of this project are the following:
 
 
 ## Rubric Points
-###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
+### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
 ---
-###Writeup / README
+### Writeup / README
 
-####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
+#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
 You're reading it! and here is a link to my [project code](https://github.com/solix/Traffic_Sign_Deep_Neural_German/blob/master/Traffic_Sign_Classifier.ipynb)
 
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 
-####1. Provide a basic summary of the data set and identify where in your code the summary was done. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+#### 1. Provide a basic summary of the data set and identify where in your code the summary was done. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
 The code for this step is contained in the second code cell of the IPython notebook.  
 
@@ -51,7 +50,7 @@ signs data set and shape :
 * The shape of a traffic sign image is ? 32 x 32 x 3  (Width, Heigth, Channels)
 * The number of unique classes/labels in the data set is ? 43 classes
 
-####2. Include an exploratory visualization of the dataset and identify where the code is in your code file.
+#### 2. Include an exploratory visualization of the dataset and identify where the code is in your code file.
 
 The code for this step is contained in the fourth code cell of the IPython notebook.  
 
@@ -59,9 +58,9 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 ![alt Image text][image1]
 
-###Design and Test a Model Architecture
+### Design and Test a Model Architecture
 
-####1. Describe how, and identify where in your code, you preprocessed the image data. What tecniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
+#### 1. Describe how, and identify where in your code, you preprocessed the image data. What tecniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc.
 
 The code for this step is contained in the from fifth cell to tenth code cell of the IPython notebook.
 
@@ -77,7 +76,7 @@ Images above are somewhat darker, this might cause some inaccuracy in when train
 ![alt text][image3]
 
 
-####2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
+#### 2. Describe how, and identify where in your code, you set up training, validation and testing data. How much data was in each set? Explain what techniques were used to split the data into these sets. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, identify where in your code, and provide example images of the additional data)
 
 The code for splitting the data into training and validation sets is contained in the first code cell of the IPython notebook. This code is provided by udacity splitting it into train, test and valid datasets. 
 
@@ -90,7 +89,7 @@ My final training set had 34799 number of images. My validation set and test set
 During start of the project I tried to augment some more data using rotate , transform, change light intensity and then populating newly created data into the missing data on some classes using loop. It was a very costly processing task on AWS since I set around 800 images as my upper limit for augmenting. However after training the model I saw a huge decrease in validation accuracy. Thats why I removed the augmenting section from my notebook sheet to focus more on constructing my convolutional layers and hyper parameters. 
 
 
-####3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+#### 3. Describe, and identify where in your code, what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
 The code for my final model is located in the seventh cell of the ipython notebook. 
 
@@ -118,7 +117,7 @@ My final model consisted of the following layers:
  
 
 
-####4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyper-parameters such as learning rate.
+#### 4. Describe how, and identify where in your code, you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyper-parameters such as learning rate.
 
 The submission provides details of the characteristics and qualities of the architecture, such as the type of model used, the number of layers, the size of each layer. Visualizations emphasizing particular qualities of the architecture are encouraged.
 
@@ -139,7 +138,7 @@ My training pipeline can be found in line twenty-two till twenty-fourth of jupyt
 * In the end of the pipeline, evaluate model accuracy using evaluate helper function borrowed from LeNet lab.
    
 
-####5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+#### 5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 The code for calculating the accuracy of the model is located in the twenty-third and twenty-fourth cell of the Ipython notebook.
 
@@ -167,9 +166,9 @@ If a well known architecture was chosen:
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well? <br /> data is splitted to three portion,I use the training portion to train the model and let the model learn about interesting characteristic on its own, and I evaluated how well the model does by showing unseen validation portion. finally after I was done with training my model and satisfied with accuracy rate, I ran my test set(which is a complete unseen data) for the model to predict new images. all accuracy rate were high enough to be proven that model is doing well enough! 
  
 
-###Test a Model on New Images
+### Test a Model on New Images
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 Here are five German traffic signs that I found on the web , reshaped and preprocessed:
 
@@ -197,7 +196,7 @@ The model was able to correctly guess none of the 5 traffic signs, which gives a
 * I am missing a skill to correctly preprocess the internet images so that it is well prepared for evaluating.
 
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction and identify where in your code softmax probabilities were outputted. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 The code for making predictions on my final model is located in the 23th and 24th cell of the Ipython notebook.
 
